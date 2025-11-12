@@ -1,37 +1,16 @@
 package handler
 
 import (
-	"net/http"
-
-	"github.com/gin-gonic/gin"
+	"github.com/Cannedsans/GoCrud/config"
+	"gorm.io/gorm"
 )
 
-func ListOpeningHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{
-		"MSG": "Get opening",
-	})
-}
+var(
+	logger *config.Logger
+	db*gorm.DB
+)
 
-func CreateOpeningHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{
-		"MSG": "Get opening",
-	})
-}
-
-func ShowOpeningHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{
-		"MSG": "Get opening",
-	})
-}
-
-func UpdateOpeningHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{
-		"MSG": "Get opening",
-	})
-}
-
-func DeleteOpeningHandler(ctx *gin.Context) {
-	ctx.JSON(http.StatusOK, gin.H{
-		"MSG": "Get opening",
-	})
+func InitializeHandler(){
+	logger = config.GetLoger("handler")
+	db = config.GetSQLite()
 }
