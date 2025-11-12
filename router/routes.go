@@ -5,7 +5,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func initializeRoutes(router *gin.Engine){
+func initializeRoutes(router *gin.Engine) {
 
 	v1 := router.Group("/api/v1/")
 	{
@@ -13,11 +13,11 @@ func initializeRoutes(router *gin.Engine){
 
 		v1.GET("/openings", handler.ListOpeningHandler)
 
-		v1.POST("/opening",handler.CreateOpeningHandler)
+		v1.POST("/opening", handler.CreateOpeningHandler)
 
-		v1.PUT("/opening",handler.UpdateOpeningHandler)
+		v1.PUT("/opening", handler.UpdateOpeningHandler)
 
-		v1.DELETE("/opening",handler.DeleteOpeningHandler)
+		v1.DELETE("/opening", handler.DeleteOpeningHandler)
 
 	}
 }
