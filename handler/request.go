@@ -52,7 +52,7 @@ type UpdateOpeningRequest struct {
 }
 
 func (r *UpdateOpeningRequest) Validade() error{
-	if r.Role != "" || r.Company != "" || r.Link != "" || r.Location != ""|| r.Remote != nil || r.Link !="" || r.Salary > 0{
+	if r.Role != "" || r.Company != "" || r.Link != "" || r.Location != ""|| r.Remote != nil || r.Salary > 0{
 		return nil
 	}
 
